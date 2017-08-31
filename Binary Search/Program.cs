@@ -30,13 +30,9 @@ namespace Binary_Search
                     //number = num.Next(number + 1, number + 2);//del
                     //list.Add(number);//still sorted but random numbers going up to a value as high as //del
                 }
-                foreach(int numb in list)
-                {
-                    //Console.Write(numb + " ");
-                }
 
                 System.Diagnostics.Stopwatch watch = System.Diagnostics.Stopwatch.StartNew();//start stopwatch
-                for (int j = 0; j < 1000000; j++)//just one binary search per list, or a million like last week?
+                for (int j = 0; j < 1000000; j++)
                 {
                     int value = num.Next(0, list.Count);//get a random value from the list list (indexes and values are equal here, so this works, but is this what the prof wants?)
                     //int value = num.Next(0, number);//del
@@ -48,7 +44,6 @@ namespace Binary_Search
                 long timeElapsedInMilliseconds = watch.ElapsedMilliseconds;//time elapses for a million searches on list of size i
 
                 Console.WriteLine("A list of size: {0} took {1} milliseconds to binary search", list.Count, timeElapsedInMilliseconds);
-                //Console.WriteLine($"{list.Count},{timeElapsedInMilliseconds}");
                 string newLine = $"{list.Count},{timeElapsedInMilliseconds}";
                 csv.AppendLine(newLine);
             }
