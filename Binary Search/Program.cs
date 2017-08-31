@@ -78,12 +78,12 @@ namespace Binary_Search
                     else if (value > list[midIndex])
                     {
                         startIndex = midIndex + 1;
-                        //midIndex = (endIndex + startIndex) / 2;
+                        
                     }
                     else if (value < list[midIndex])
                     {
                         endIndex = midIndex - 1;
-                        //midIndex = (endIndex + startIndex) / 2;
+                        
                     }
                     if (startIndex > endIndex)
                     {
